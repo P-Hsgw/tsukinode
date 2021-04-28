@@ -1,15 +1,16 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import PropTypes from "prop-types"
+
 
 const Menu = ({ burger, click }) => {
   return burger ? (
-
     <>
     <div className="h-screen fixed inset-0 z-40 filter grayscale blur-md contrast-200"  onClick={click} >
     </div>
       <div className="bg-yellow-600 h-screen w-6/12 fixed right-0 z-50 opacity-95 ">
-      <FontAwesomeIcon icon={faTimes} className="absolute right-6 top-2 text-yellow-900 cursor-pointer" size="2x" onClick={click} />
+      <FontAwesomeIcon icon={faTimes} className="absolute right-4 top-2 text-yellow-900 cursor-pointer" size="2x" onClick={click} />
         <ul className="flex flex-col justify-center items-center h-full space-y-6">
 
           <li>
@@ -91,6 +92,11 @@ const Header = () => {
       <Menu burger={burger} click={toggleBurger} />
     </>
   )
+}
+
+Menu.propTypes = {
+  burger: PropTypes.bool.isRequired,
+  click: PropTypes.func.isRequired,
 }
 
 export default Header

@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Section = ({children, sectionColor}) => {
+const Section = ({children, sectionColor, sectionID}) => {
 
   return(
-    <div className={`section bg-${sectionColor} h-96`}>
+    <div className={`section bg-${sectionColor} h-screen flex justify-center items-center`} id={sectionID}>
       {children}
     </div>
   )

@@ -34,5 +34,12 @@ module.exports = {
     // `gatsby-plugin-offline`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -50,
+        duration: 200
+      }
+    }
   ],
 }

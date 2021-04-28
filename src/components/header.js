@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 
 const Menu = ({ burger, click }) => {
   return burger ? (
@@ -15,7 +17,7 @@ const Menu = ({ burger, click }) => {
 
           <li>
           <p
-              className="text-black hover:text-blue-800  text-2xl cursor-pointer"
+              className=" hover:text-blue-800  text-2xl cursor-pointer"
               
             >
               ABOUT
@@ -23,15 +25,15 @@ const Menu = ({ burger, click }) => {
           </li>
           <li>
           <p
-              className="text-black hover:text-blue-800  text-2xl cursor-pointer"
+              className=" hover:text-blue-800  text-2xl cursor-pointer"
               
             >
-              OUR FOCUS
+             FOCUS
             </p>
           </li>
           <li>
           <p
-              className="text-black hover:text-blue-800  text-2xl cursor-pointer"
+              className=" hover:text-blue-800  text-2xl cursor-pointer"
               
             >
               CONTACT
@@ -61,15 +63,15 @@ const Header = () => {
             <p className="text-3xl">TSUKINODE</p>
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
-            <p
+            <AnchorLink to="#about" title="about"><p
               className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer"
             >
               ABOUT
-            </p>
+            </p></AnchorLink >
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
-              OUR FOCUS
+              FOCUS
             </p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible">

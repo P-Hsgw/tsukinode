@@ -1,42 +1,51 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React, { useState } from "react";
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+
+const Header = () => {
+
+  const [burger, setBurger] = useState(false)
+
+  const openBurger = () => {
+    setBurger(!burger)
+  }
+
+  return (
+  <header className="font-serif fixed w-screen">
+    <ul className="flex">
+      <li className="mr-auto ml-6 mt-2 mb-6">
+        <p className="text-3xl">TSUKINODE</p>
+      </li>
+      <li className="mr-6 mt-2 mb-6 hidden md:list-item">
+        <p
+          className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl"
+          href="#"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+          PORTFOLIO
+        </p>
+      </li>
+      <li className="mr-6 mt-2 mb-6 hidden md:list-item">
+        <p
+          className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl"
+        >
+          ABOUT
+        </p>
+      </li>
+      <li className="mt-2 mb-6 invisible md:visible">
+        <p
+          className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl" 
+        >
+          CONTACT
+        </p>
+      </li>
+      <li className="mr-6 mt-2 mb-6 visible md:invisible">
+      <FontAwesomeIcon icon={faBars} size="2x" className="text-yellow-400 hover:text-yellow-500 cursor-pointer" onClick={openBurger} />
+      </li>
+
+    </ul>
   </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  )
 }
 
 export default Header

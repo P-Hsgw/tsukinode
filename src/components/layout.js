@@ -9,8 +9,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-        <main className="font-serif">{children}</main>
-        <Footer />
+        <main className="font-serif bg-gray-50 text-gray-800">{children}</main>
+      <Footer />
     </>
   )
 }

@@ -7,10 +7,10 @@ import PropTypes from "prop-types"
 const Menu = ({ burger, click }) => {
   return burger ? (
     <>
-    <div className="h-screen fixed inset-0 z-40 filter grayscale blur-md contrast-200"  onClick={click} >
+    <div className="h-screen fixed inset-0 z-40"  onClick={click} >
     </div>
-      <div className="bg-yellow-600 h-screen w-6/12 fixed right-0 z-50 opacity-95 ">
-      <FontAwesomeIcon icon={faTimes} className="absolute right-4 top-2 text-yellow-900 cursor-pointer" size="2x" onClick={click} />
+      <div className="bg-yellow-300 h-screen w-6/12 fixed right-0 z-50 opacity-95 ">
+      <FontAwesomeIcon icon={faTimes} className="absolute right-4 top-2 text-blue-800 cursor-pointer" size="2x" onClick={click} />
         <ul className="flex flex-col justify-center items-center h-full space-y-6">
 
           <li>
@@ -63,7 +63,6 @@ const Header = () => {
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <p
               className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer"
-              
             >
               ABOUT
             </p>
@@ -82,7 +81,7 @@ const Header = () => {
             {!burger && <FontAwesomeIcon
               icon={faBars}
               size="2x"
-              className="text-yellow-400 hover:text-yellow-500 cursor-pointer"
+              className="text-blue-500 hover:text-blue-800 cursor-pointer"
               onClick={toggleBurger}
             />}
           </li>

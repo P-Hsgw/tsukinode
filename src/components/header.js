@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const Menu = ({ burger, click }) => {
   return burger ? (
+
     <>
     <div className="h-screen fixed inset-0 z-40 filter grayscale blur-md contrast-200"  onClick={click} >
     </div>
@@ -13,24 +14,24 @@ const Menu = ({ burger, click }) => {
 
           <li>
           <p
-              className="text-blue-500 hover:text-blue-800  text-2xl"
-              href="#"
+              className="text-black hover:text-blue-800  text-2xl cursor-pointer"
+              
             >
               ABOUT
             </p>
           </li>
           <li>
           <p
-              className="text-blue-500 hover:text-blue-800  text-2xl"
-              href="#"
+              className="text-black hover:text-blue-800  text-2xl cursor-pointer"
+              
             >
               OUR FOCUS
             </p>
           </li>
           <li>
           <p
-              className="text-blue-500 hover:text-blue-800  text-2xl"
-              href="#"
+              className="text-black hover:text-blue-800  text-2xl cursor-pointer"
+              
             >
               CONTACT
             </p>
@@ -60,19 +61,19 @@ const Header = () => {
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <p
-              className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl"
-              href="#"
+              className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer"
+              
             >
               ABOUT
             </p>
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
-            <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl ">
+            <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
               OUR FOCUS
             </p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible">
-            <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl">
+            <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
               CONTACT
             </p>
           </li>

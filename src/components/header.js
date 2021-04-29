@@ -8,13 +8,13 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Menu = ({ burger, click }) => {
 
-  return burger ? (
+  return (
     <>
-      <div className="h-screen fixed inset-0 z-40" onClick={click}></div>
-      <div className="bg-yellow-300 h-screen w-6/12 fixed right-0 z-50 opacity-95 ">
+      <div className={`h-screen fixed inset-0 z-40 ${burger ? "block" : "hidden"}`} onClick={click}></div>
+      <div className={` bg-yellow-300 h-screen w-6/12 fixed right-0 opacity-95 z-50 transition-all md:hidden ${burger ? "mr-0" : "-mr-96"}`}>
         <FontAwesomeIcon
           icon={faTimes}
-          className="absolute right-4 top-2 text-blue-800 cursor-pointer"
+          className="absolute right-7 top-4 text-blue-800 cursor-pointer"
           size="2x"
           onClick={click}
         />
@@ -38,8 +38,6 @@ const Menu = ({ burger, click }) => {
         </ul>
       </div>
     </>
-  ) : (
-    <></>
   )
 }
 
@@ -60,14 +58,13 @@ const Header = () => {
 
   const toggleBurger = () => {
     setBurger(!burger)
-    console.log(burger)
   }
   return (
     <>
     
-      <header className={`font-serif fixed w-screen md:bg-transparent transition duration-500 ${colorChange && "bg-gray-600 transition duration-500"}`}>
+      <header className={`font-serif fixed w-screen md:bg-transparent transition duration-500 ${colorChange && "bg-gray-600"}`}>
         <ul className="flex">
-          <li className={`mr-auto ml-6 mt-2 mb-6 transition duration-500 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800`}>
+          <li className={`mr-auto ml-6 mt-4 mb-6 transition duration-500 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800`}>
             <p className="text-3xl">TSUKINODE</p>
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
@@ -87,12 +84,12 @@ const Header = () => {
               CONTACT
             </p>
           </li>
-          <li className="mr-6 mt-2 mb-6 visible md:invisible">
+          <li className="mr-6 mt-4 mb-6 visible md:invisible">
             {!burger && (
               <FontAwesomeIcon
                 icon={faBars}
                 size="2x"
-                className="text-blue-500 hover:text-blue-800 cursor-pointer"
+                className= {`hover:text-blue-800 cursor-pointer  ${colorChange ? "text-gray-50" : "text-blue-500"}`}
                 onClick={toggleBurger}
               />
             )}

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tsukinode`,
+    description: `Tsukinode - Influencer Marketing agency based in Tokyo`,
+    author: `@Patryk Hasegawa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,12 +34,6 @@ module.exports = {
     // `gatsby-plugin-offline`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-fontawesome-css`,
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -50,
-        duration: 200
-      }
-    }
+    `gatsby-plugin-smoothscroll`
   ],
 }

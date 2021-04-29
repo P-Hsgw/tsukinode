@@ -12,7 +12,8 @@ const Section = ({children, sectionColor, sectionID}) => {
 
 Section.propTypes = {
   children: PropTypes.node,
-  sectionColor: PropTypes.string.isRequired
+  sectionColor: PropTypes.string.isRequired,
+  sectionID: PropTypes.string.isRequired
 }
 
 export default Section

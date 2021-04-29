@@ -5,10 +5,7 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {zIndex: {
-
-      '-10': '-10',
-     }},
+    extend: {},
   },
   variants: {
     extend: {},

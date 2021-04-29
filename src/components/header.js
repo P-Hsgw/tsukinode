@@ -89,7 +89,7 @@ const Header = () => {
               <FontAwesomeIcon
                 icon={faBars}
                 size="2x"
-                className= {`hover:text-blue-800 cursor-pointer  ${colorChange ? "text-gray-50" : "text-blue-500"}`}
+                className= {`hover:text-blue-800 cursor-pointer  ${colorChange ? "text-gray-50" : "text-gray-200"}`}
                 onClick={toggleBurger}
               />
             )}

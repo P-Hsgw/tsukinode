@@ -6,6 +6,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Menu = ({ burger, click }) => {
+
   return burger ? (
     <>
       <div className="h-screen fixed inset-0 z-40" onClick={click}></div>
@@ -43,17 +44,27 @@ const Menu = ({ burger, click }) => {
 
 const Header = () => {
   const [burger, setBurger] = useState(false)
+  const [colorChange, setColorChange] = useState(false)
+  const changeNavColor = () => {
+    if(window.scrollY >= 80){
+      setColorChange(true);
+    } else {
+      setColorChange(false);
+    }
+  }
+
+  window.addEventListener("scroll", changeNavColor);
 
   const toggleBurger = () => {
     setBurger(!burger)
     console.log(burger)
   }
-
   return (
     <>
-      <header className="font-serif fixed w-screen">
+    
+      <header className={`font-serif fixed w-screen md:bg-transparent ${colorChange && "bg-gray-600 transition duration-500"}`}>
         <ul className="flex">
-          <li className="mr-auto ml-6 mt-2 mb-6">
+          <li className={`mr-auto ml-6 mt-2 mb-6 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800`}>
             <p className="text-3xl">TSUKINODE</p>
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">

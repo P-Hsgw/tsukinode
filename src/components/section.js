@@ -1,19 +1,37 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Card = ({title, firstParagraph, secondParagraph}) => {
+const Card = ({ title, firstParagraph, secondParagraph }) => {
   return (
-  <div className="container lg:w-2/6 lg:min-h-2/4 shadow-md overflow-hidden flex-shrink">
-  <p className="text-5xl m-16">{title}</p>
-  <p className="m-16">{firstParagraph}</p>
-  <p className="m-16">{secondParagraph}</p>
-  </div>
+    <div className="container lg:w-2/6 lg:min-h-2/4 shadow-lg overflow-hidden flex-shrink">
+      <p className="text-5xl m-16">{title}</p>
+      <p className="m-16">{firstParagraph}</p>
+      <p className="m-16">{secondParagraph}</p>
+    </div>
   )
 }
 
-const Section = ({children, sectionColor, sectionID}) => {
-  return(
-    <div className={`section bg-${sectionColor} h-screen flex justify-center items-center`} id={sectionID}>
+const Box = ( { title, firstParagraph }) => {
+  return (
+    <>
+      <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-5 mr-10 ml-10">
+        <div>
+          <h2 className="text-3xl m-5">{title}</h2>
+          <p className="m-8">
+            {firstParagraph}
+          </p>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const Section = ({ children, sectionColor, sectionID }) => {
+  return (
+    <div
+      className={`section bg-${sectionColor} min-h-screen flex justify-center items-center flex-wrap`}
+      id={sectionID}
+    >
       {children}
     </div>
   )
@@ -22,14 +40,13 @@ const Section = ({children, sectionColor, sectionID}) => {
 Section.propTypes = {
   children: PropTypes.node,
   sectionColor: PropTypes.string,
-  sectionID: PropTypes.string.isRequired
+  sectionID: PropTypes.string.isRequired,
 }
 
 Card.propTypes = {
-  title: PropTypes.string,
-  firstParagraph: PropTypes.string,
-  secondParagraph: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  firstParagraph: PropTypes.string.isRequired,
+  secondParagraph: PropTypes.string,
 }
 
-
-export { Card, Section }
+export { Card, Section, Box }

@@ -4,7 +4,8 @@ const Form = () => (
   <div className="mt-10 sm:mt-0">
   <div className="md:grid md:grid-cols-2 md:gap-6">
     <div className="mt-5 md:mt-0 md:col-span-2">
-      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
         <div className="shadow overflow-hidden sm:rounded-md">
           <div className="px-4 py-5 bg-white sm:p-6">
             <div className="grid grid-cols-6 gap-6">

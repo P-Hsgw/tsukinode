@@ -19,19 +19,19 @@ const Menu = ({ burger, click }) => {
           onClick={click}
         />
         <ul className="flex flex-col justify-center items-center h-full space-y-6">
-          <li role="link" onClick={() => scrollTo("#about")}>
-            <p className=" hover:text-blue-800  text-2xl cursor-pointer">
+          <li>
+            <p onClick={() => scrollTo("#about")} className=" hover:text-blue-800  text-2xl cursor-pointer">
               ABOUT
             </p>
           </li>
 
           <li>
-            <p className=" hover:text-blue-800  text-2xl cursor-pointer">
+            <p onClick={() => scrollTo("#focus")} className=" hover:text-blue-800  text-2xl cursor-pointer">
               FOCUS
             </p>
           </li>
           <li>
-            <p className=" hover:text-blue-800  text-2xl cursor-pointer">
+            <p onClick={() => scrollTo("#contact")} className=" hover:text-blue-800  text-2xl cursor-pointer">
               CONTACT
             </p>
           </li>
@@ -75,12 +75,12 @@ const Header = () => {
             </p>
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
-            <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
+            <p onClick={() => scrollTo("#focus")} className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
               FOCUS
             </p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible">
-            <p className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
+            <p onClick={() => scrollTo("#contact")} className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
               CONTACT
             </p>
           </li>

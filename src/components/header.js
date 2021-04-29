@@ -19,7 +19,7 @@ const Menu = ({ burger, click }) => {
           onClick={click}
         />
         <ul className="flex flex-col justify-center items-center h-full space-y-6">
-          <li onClick={() => scrollTo("#about")}>
+          <li role="link" onClick={() => scrollTo("#about")}>
             <p className=" hover:text-blue-800  text-2xl cursor-pointer">
               ABOUT
             </p>
@@ -73,7 +73,7 @@ const Header = () => {
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <p
               onClick={() => scrollTo("#about")}
-              className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
+              className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer" role="link">
               ABOUT
             </p>
           </li>

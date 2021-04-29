@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import scrollTo from "gatsby-plugin-smoothscroll"
+
 
 const Menu = ({ burger, click }) => {
 
@@ -52,8 +53,10 @@ const Header = () => {
       setColorChange(false);
     }
   }
-
-  window.addEventListener("scroll", changeNavColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavColor);
+})
+  
 
   const toggleBurger = () => {
     setBurger(!burger)

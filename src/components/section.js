@@ -25,5 +25,11 @@ Section.propTypes = {
   sectionID: PropTypes.string.isRequired
 }
 
+Card.propTypes = {
+  title: PropTypes.string,
+  firstParagraph: PropTypes.string,
+  secondParagraph: PropTypes.string.isRequired
+}
+
 
 export { Card, Section }

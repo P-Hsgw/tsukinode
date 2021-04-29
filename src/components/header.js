@@ -62,7 +62,7 @@ const Header = () => {
   return (
     <>
     
-      <header className={`font-serif fixed w-screen md:bg-transparent transition duration-500 ${colorChange && "bg-gray-600"}`}>
+      <header className={`font-serif fixed w-screen md:bg-transparent transition duration-500 z-40 ${colorChange && "bg-gray-600"}`}>
         <ul className="flex">
           <li className={`mr-auto ml-6 mt-4 mb-6 transition duration-500 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800`}>
             <p className="text-3xl">TSUKINODE</p>

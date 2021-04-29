@@ -21,8 +21,9 @@ const Section = ({children, sectionColor, sectionID}) => {
 
 Section.propTypes = {
   children: PropTypes.node,
-  sectionColor: PropTypes.string.isRequired,
+  sectionColor: PropTypes.string,
   sectionID: PropTypes.string.isRequired
 }
+
 
 export { Card, Section }

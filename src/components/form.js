@@ -3,7 +3,10 @@ import React from "react"
 const Form = () => (
   <div className="mt-10 sm:mt-0">
   <div className="md:grid md:grid-cols-2 md:gap-6">
+
     <div className="mt-5 md:mt-0 md:col-span-2">
+    <p className="text-5xl text-center mb-5">Contact us</p>
+
       <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
         <div className="shadow overflow-hidden sm:rounded-md">

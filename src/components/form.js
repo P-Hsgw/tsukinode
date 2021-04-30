@@ -10,7 +10,7 @@ const Form = () => (
       <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
         <div className="shadow overflow-hidden sm:rounded-md">
-          <div className="px-4 py-5 bg-white dark:bg-gray-800 sm:p-6">
+          <div className="px-4 py-5 bg-white dark:bg-gray-900 sm:p-6">
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
                 <label htmlFor="first_name" className="block text-sm font-medium text-gray-700 dark:text-gray-50">
@@ -79,7 +79,7 @@ const Form = () => (
 
             </div>
           </div>
-          <div className="px-4 py-3 bg-gray-50 dark:bg-gray-800 text-right sm:px-6">
+          <div className="px-4 py-3 bg-gray-50 dark:bg-gray-900 text-right sm:px-6">
             <button
               type="submit"
               className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm text-gray-50 font-medium rounded-md bg-blue-400 dark:text-gray-800 dark:bg-gray-50 hover:bg-blue-600 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"

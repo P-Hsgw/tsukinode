@@ -4,10 +4,10 @@ import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import scrollTo from "gatsby-plugin-smoothscroll"
-// If burger true change visibility 
+
 
 const Menu = ({ burger, click }) => {
-
+  
   return (
     <>
       <div className={`h-screen fixed inset-0 z-40 ${burger ? "block" : "hidden"}`} onClick={click}></div>
@@ -62,25 +62,27 @@ const Header = () => {
   return (
     <>
     
-      <header className={`font-serif fixed w-screen md:bg-transparent transition duration-500 z-40 ${colorChange && "bg-gray-600"}`}>
+      <header className={`font-serif fixed w-screen md:bg-gray-50 dark:bg-gray-800 transition duration-500 z-40 ${colorChange && "bg-gray-600 "}`}>
         <ul className="flex">
-          <li className={`mr-auto ml-6 mt-4 mb-6 transition duration-500 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800`}>
+          <li className={`mr-auto ml-6 mt-4 mb-6 transition duration-500 dark:text-gray-50 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800 `}>
             <p className="text-3xl">TSUKINODE</p>
+          </li>
+          <li className="mt-2 mb-6 invisible md:visible">
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <p
               onClick={() => scrollTo("#about")}
-              className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer" role="link">
+              className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer dark:text-gray-50" role="link">
               ABOUT
             </p>
           </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
-            <p onClick={() => scrollTo("#focus")} className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
+            <p onClick={() => scrollTo("#focus")} className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer dark:text-gray-50">
               FOCUS
             </p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible">
-            <p onClick={() => scrollTo("#contact")} className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer">
+            <p onClick={() => scrollTo("#contact")} className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer dark:text-gray-50">
               CONTACT
             </p>
           </li>
@@ -89,7 +91,7 @@ const Header = () => {
               <FontAwesomeIcon
                 icon={faBars}
                 size="2x"
-                className= {`cursor-pointer  ${colorChange ? "text-gray-50 hover:text-gray-200" : "text-blue-500 hover:text-blue-800"}`}
+                className= {`cursor-pointer  dark:text-gray-50 ${colorChange ? "text-gray-50 hover:text-gray-200" : "text-blue-500 hover:text-blue-800"}`}
                 onClick={toggleBurger}
               />
             )}

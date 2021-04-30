@@ -5,6 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
+// Separate state handler and separate button l;ogic - state handler gets state in header from layout, button gets state from handler in header
+
+// const DarkMode = ({state}) => {
+//   const [mode, setMode] = useState(false)
+
+//   const toggleMode = () => {
+//     setMode(!mode)
+//     state
+//   }
+
+//   return(
+//     <button onClick={toggleMode}>BLEBLE</button>
+//   )
+// }
 
 const Menu = ({ burger, click }) => {
   

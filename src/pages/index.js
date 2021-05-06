@@ -8,7 +8,7 @@ import { Card, Section, Box } from "../components/section"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Agency" />
+    <Seo title="Agency" description="Influencer Marketing agency. We will help you get the best prices for Twitch and YouTube content creators."/>
     <Hero />
     <Section sectionColor="gray-50" sectionID="about">
       <Card

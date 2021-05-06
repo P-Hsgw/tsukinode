@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tsukinode`,
-    description: `Tsukinode - Influencer Marketing agency based in Tokyo`,
+    description: `Influencer Marketing agency. We will help you get the best prices for Twitch and YouTube content creators.`,
     author: `@Patryk Hasegawa`,
   },
   plugins: [

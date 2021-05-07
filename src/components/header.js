@@ -185,7 +185,7 @@ MenuLink.defaultProps = {
   hoverColor: "blue-800",
   desktopVisibility: "hidden",
   mdVisibility: "list-item",
-  textSize: "2xl",
+  textSize: "3xl",
   cursorType: "cursor-pointer",
   darkModeColor: "gray-50",
 }

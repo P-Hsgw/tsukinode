@@ -79,7 +79,7 @@ const Header = () => {
       <header className={`font-serif fixed w-screen md:bg-gray-50 dark:bg-gray-800 transition duration-500 z-40 ${colorChange && "bg-gray-600 "}`}>
         <ul className="flex">
           <li className={`mr-auto ml-6 mt-4 mb-6 transition duration-500 dark:text-gray-50 ${colorChange && "text-gray-50 transition duration-500"} md:text-gray-800 `}>
-            <p className="text-3xl">TSUKINODE</p>
+            <p className="text-3xl text-gray-800">TSUKINODE</p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible">
           </li>

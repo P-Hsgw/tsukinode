@@ -20,11 +20,11 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 //   )
 // }
 
-const MenuLink = ({ target, children }) => {
+const MenuLink = ({ target, children, textColor, hoverColor, desktopVisibility, mdVisibility, textSize, cursorType, darkModeColor }) => {
   return (
     <p
       onClick={() => scrollTo(`#${target}`)}
-      className="text-blue-500 hover:text-blue-800 hidden md:list-item text-2xl cursor-pointer dark:text-gray-50"
+      className={`text-${textColor} hover:text-${hoverColor} ${desktopVisibility} md:${mdVisibility} text-${textSize} ${cursorType} dark:text-${darkModeColor}`}
     >
       {children}
     </p>
@@ -160,5 +160,16 @@ MenuLink.propTypes = {
   target: PropTypes.string,
   children: PropTypes.string.isRequired
 }
+
+MenuLink.defaultProps = {
+  textColor: "blue-500",
+  hoverColor: "blue-800",
+  desktopVisibility: "hidden",
+  mdVisibility: "list-item",
+  textSize: "2xl",
+  cursorType: "cursor-pointer",
+  darkModeColor: "gray-50"
+};
+
 
 export default Header

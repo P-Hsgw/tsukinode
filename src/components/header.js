@@ -20,7 +20,17 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 //   )
 // }
 
-const MenuLink = ({ target, children, textColor, hoverColor, desktopVisibility, mdVisibility, textSize, cursorType, darkModeColor }) => {
+const MenuLink = ({
+  target,
+  children,
+  textColor,
+  hoverColor,
+  desktopVisibility,
+  mdVisibility,
+  textSize,
+  cursorType,
+  darkModeColor,
+}) => {
   return (
     <p
       onClick={() => scrollTo(`#${target}`)}
@@ -51,29 +61,38 @@ const Menu = ({ burger, click }) => {
         />
         <ul className="flex flex-col justify-center items-center h-full space-y-6">
           <li>
-            <p
-              onClick={() => scrollTo("#about")}
-              className=" hover:text-gray-300 text-gray-50 text-2xl dark:text-gray-800 cursor-pointer"
+            <MenuLink
+              target="about"
+              textColor="gray-50"
+              hoverColor="gray-300"
+              darkModeColor="gray-800"
+              desktopVisibility="list-item"
             >
               ABOUT
-            </p>
+            </MenuLink>
           </li>
 
           <li>
-            <p
-              onClick={() => scrollTo("#focus")}
-              className=" hover:text-gray-300 text-gray-50 text-2xl dark:text-gray-800 cursor-pointer"
+            <MenuLink
+              target="focus"
+              textColor="gray-50"
+              hoverColor="gray-300"
+              darkModeColor="gray-800"
+              desktopVisibility="list-item"
             >
               FOCUS
-            </p>
+            </MenuLink>
           </li>
           <li>
-            <p
-              onClick={() => scrollTo("#contact")}
-              className=" hover:text-gray-300 text-gray-50 text-2xl dark:text-gray-800 cursor-pointer"
+            <MenuLink
+              target="contact"
+              textColor="gray-50"
+              hoverColor="gray-300"
+              darkModeColor="gray-800"
+              desktopVisibility="list-item"
             >
               CONTACT
-            </p>
+            </MenuLink>
           </li>
         </ul>
       </div>
@@ -158,7 +177,7 @@ Menu.propTypes = {
 
 MenuLink.propTypes = {
   target: PropTypes.string,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 }
 
 MenuLink.defaultProps = {
@@ -168,8 +187,7 @@ MenuLink.defaultProps = {
   mdVisibility: "list-item",
   textSize: "2xl",
   cursorType: "cursor-pointer",
-  darkModeColor: "gray-50"
-};
-
+  darkModeColor: "gray-50",
+}
 
 export default Header

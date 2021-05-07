@@ -1,10 +1,9 @@
 import * as React from "react"
-
-
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Card, Section, Box } from "../components/section"
+import { Section, Box } from "../components/section"
 
 
 const NotFoundPage = () => (
@@ -13,7 +12,7 @@ const NotFoundPage = () => (
     <h1 className="text-red-500"></h1>
     <p></p>
     <Section sectionColor="gray-50" sectionID="error">
-    <Box title="Error 404" firstParagraph="You just hit a route that doesn&#39;t exist... the sadness."/>
+    <Box title="Error 404" firstParagraph="You just hit a route that doesn't exist... the sadness." link={<Link to="/">GO BACK</Link>}/>
     </Section>
   </Layout>
 )

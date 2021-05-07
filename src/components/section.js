@@ -14,7 +14,7 @@ const Card = ({ title, firstParagraph, secondParagraph }) => {
 const Box = ( { title, firstParagraph, link }) => {
   return (
     <>
-      <div className="max-w-md py-4 px-8 bg-white dark:bg-gray-900 shadow-lg rounded-lg my-6 mr-10 ml-10 mt-5">
+      <div className="max-w-md py-4 px-8 bg-white dark:bg-gray-900 shadow-lg rounded-lg my-5 mr-10 ml-10">
         <div>
           <h2 className="text-3xl m-5">{title}</h2>
           <p className="m-8">

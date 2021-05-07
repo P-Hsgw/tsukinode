@@ -1,8 +1,8 @@
 import * as React from "react"
-import Hero from "../components/hero"
 import Seo from "../components/seo"
-import Form from "../components/form"
 
+import Hero from "../components/hero"
+import Form from "../components/form"
 import Layout from "../components/layout"
 import { Card, Section, Box } from "../components/section"
 

@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 
-import styled from 'styled-components'
-import Toggle from "react-toggle"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
+// Separate state handler and separate button l;ogic - state handler gets state in header from layout, button gets state from handler in header
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faMoon, faTimes } from "@fortawesome/free-solid-svg-icons"
-import { Sun } from '@styled-icons/bootstrap'
+// const DarkMode = ({state}) => {
+//   const [mode, setMode] = useState(false)
 
-const GraySun = styled(Sun)`
-  color: #1F2937;
-`
+//   const toggleMode = () => {
+//     setMode(!mode)
+//     state
+//   }
 
+//   return(
+//     <button onClick={toggleMode}>BLEBLE</button>
+//   )
+// }
 
 const MenuLink = ({
   target,
@@ -95,7 +100,7 @@ const Menu = ({ burger, click }) => {
   )
 }
 
-const Header = ( {handleClick }) => {
+const Header = () => {
   const [burger, setBurger] = useState(false)
   const [colorChange, setColorChange] = useState(false)
   const changeNavColor = () => {
@@ -132,9 +137,6 @@ const Header = ( {handleClick }) => {
             >
               TSUKINODE
             </p>
-          </li>
-          <li className="mt-4 mb-6 mr-6">
-            <Toggle onClick={handleClick} icons={{checked: <FontAwesomeIcon icon={faMoon} className="text-gray-500 pb-1"/> , unchecked: <GraySun />  }} />
           </li>
           <li className="mt-2 mb-6 invisible md:visible"></li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">

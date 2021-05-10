@@ -5,20 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
-// Separate state handler and separate button l;ogic - state handler gets state in header from layout, button gets state from handler in header
-
-// const DarkMode = ({state}) => {
-//   const [mode, setMode] = useState(false)
-
-//   const toggleMode = () => {
-//     setMode(!mode)
-//     state
-//   }
-
-//   return(
-//     <button onClick={toggleMode}>BLEBLE</button>
-//   )
-// }
+import { DarkModeSwitch } from "react-toggle-dark-mode"
 
 const MenuLink = ({
   target,
@@ -100,9 +87,10 @@ const Menu = ({ burger, click }) => {
   )
 }
 
-const Header = () => {
+const Header = ({ handleClick }) => {
   const [burger, setBurger] = useState(false)
   const [colorChange, setColorChange] = useState(false)
+  const [isSun, setSun] = React.useState(false)
   const changeNavColor = () => {
     if (window.scrollY >= 80) {
       setColorChange(true)
@@ -113,6 +101,10 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", changeNavColor)
   })
+
+  const toggleSun = () => {
+   setSun(!isSun); 
+  }
 
   const toggleBurger = () => {
     setBurger(!burger)
@@ -139,6 +131,15 @@ const Header = () => {
             </p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible"></li>
+          <DarkModeSwitch
+            style={{ marginBottom: "2rem" }}
+            checked={isSun}
+            onChange={() => { toggleSun(); handleClick()} }
+            size={50}
+            className="mx-2 my-4"
+            moonColor="#808080"
+            sunColor="#f9fafb"
+          />
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <MenuLink target="about">ABOUT</MenuLink>
           </li>

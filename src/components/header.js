@@ -131,15 +131,15 @@ const Header = ({ handleClick }) => {
             </p>
           </li>
           <li className="mt-2 mb-6 invisible md:visible"></li>
+          <li className="mt-2 mb-6 mr-2 invisible md:visible">
           <DarkModeSwitch
-            style={{ marginBottom: "2rem" }}
             checked={isSun}
-            onChange={() => { toggleSun(); handleClick()} }
-            size={50}
-            className="mx-2 my-4"
+            onChange={() => { toggleSun(); handleClick() } }
+            size={30}
             moonColor="#808080"
             sunColor="#f9fafb"
           />
+          </li>
           <li className="mr-6 mt-2 mb-6 hidden md:list-item">
             <MenuLink target="about">ABOUT</MenuLink>
           </li>

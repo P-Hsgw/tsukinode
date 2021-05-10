@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
-import scrollTo from "gatsby-plugin-smoothscroll"
 
 import { DarkModeSwitch } from "react-toggle-dark-mode"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const MenuLink = ({
   target,

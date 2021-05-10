@@ -11,18 +11,14 @@ const Card = ({ title, firstParagraph, secondParagraph }) => {
   )
 }
 
-const Box = ( { title, firstParagraph, link }) => {
+const Box = ({ title, firstParagraph, link }) => {
   return (
     <>
       <div className="max-w-md py-4 px-8 bg-white dark:bg-gray-900 shadow-lg rounded-lg my-5 mr-10 ml-10">
         <div>
           <h2 className="text-3xl m-5">{title}</h2>
-          <p className="m-8">
-            {firstParagraph}
-          </p>
-          <p className="pl-72">
-            {link}
-          </p>
+          <p className="m-8">{firstParagraph}</p>
+          <p className="pl-72">{link}</p>
         </div>
       </div>
     </>
@@ -55,7 +51,7 @@ Card.propTypes = {
 Box.propTypes = {
   title: PropTypes.string.isRequired,
   firstParagraph: PropTypes.string.isRequired,
-  link: PropTypes.any
+  link: PropTypes.any,
 }
 
 export { Card, Section, Box }

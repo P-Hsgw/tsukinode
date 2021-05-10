@@ -34,6 +34,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-fontawesome-css`,
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-styled-components`
   ],
 }

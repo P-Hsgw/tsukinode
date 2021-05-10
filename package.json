@@ -11,6 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@tailwindcss/forms": "^0.3.2",
+    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.3.1",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
@@ -20,12 +21,17 @@
     "gatsby-plugin-react-helmet": "^4.2.0",
     "gatsby-plugin-sharp": "^3.2.1",
     "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-plugin-styled-components": "^4.4.0",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-toggle": "^4.1.2",
+    "styled-components": "^5.3.0",
+    "styled-icons": "^10.33.0",
+    "tailwindcss-toggle": "github:TowelSoftware/tailwindcss-toggle"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
